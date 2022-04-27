@@ -91,7 +91,7 @@ public class SayHello extends javax.swing.JPanel {
             for ( int i=0; i<101; i++ ) {
                 jProgressBar1.setValue(i);
                 try {
-                    Thread.sleep(20);
+                    Thread.sleep(10);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(SayHello.class.getName()).log(Level.SEVERE, null, ex);
                 }
