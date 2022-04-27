@@ -35,6 +35,7 @@ public class SayHello extends javax.swing.JPanel {
         jProgressBar1 = new javax.swing.JProgressBar();
         jLabel2 = new javax.swing.JLabel();
 
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getSize()+3f));
         jLabel1.setText("This is an app.");
 
         jButton1.setText("Press this button...");
@@ -44,7 +45,7 @@ public class SayHello extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setText(" ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -75,7 +76,7 @@ public class SayHello extends javax.swing.JPanel {
                 .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addContainerGap(189, Short.MAX_VALUE))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -84,17 +85,20 @@ public class SayHello extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     void doProgress() {
-        jProgressBar1.setMinimum(0);
-        jProgressBar1.setMaximum(100);
-        for ( int i=0; i<100; i++ ) {
-            jProgressBar1.setValue(i);
-            try {
-                Thread.sleep(20);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(SayHello.class.getName()).log(Level.SEVERE, null, ex);
+        Runnable run= () -> {
+            jProgressBar1.setMinimum(0);
+            jProgressBar1.setMaximum(100);
+            for ( int i=0; i<101; i++ ) {
+                jProgressBar1.setValue(i);
+                try {
+                    Thread.sleep(20);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(SayHello.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
-        }
-        jLabel2.setText("All Done!");
+            jLabel2.setText("All Done!");
+        };
+        new Thread(run).start();
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
