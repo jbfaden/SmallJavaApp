@@ -7,6 +7,7 @@ package smalljavaapp;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -110,6 +111,7 @@ public class SayHello extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     public static void main(String[] args  ) {
-        JOptionPane.showMessageDialog( null, new SayHello(), "Say Hello", JOptionPane.OK_OPTION );
+        JOptionPane.showMessageDialog( null, new SayHello(), "Say Hello", JOptionPane.OK_OPTION, 
+            new ImageIcon( SayHello.class.getResource("icon.png") ) );
     }
 }
