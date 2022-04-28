@@ -36,7 +36,7 @@ public class SayHello extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
 
         jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getSize()+3f));
-        jLabel1.setText("This is an app.");
+        jLabel1.setText("This is a pretend app");
 
         jButton1.setText("Press this button...");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +81,7 @@ public class SayHello extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        jLabel2.setText("Running job...");
         doProgress();
     }//GEN-LAST:event_jButton1ActionPerformed
 

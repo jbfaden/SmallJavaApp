@@ -60,7 +60,7 @@
             <Font component="jLabel1" property="font" relativeSize="true" size="3"/>
           </FontInfo>
         </Property>
-        <Property name="text" type="java.lang.String" value="This is an app."/>
+        <Property name="text" type="java.lang.String" value="This is a pretend app"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
