@@ -8,6 +8,7 @@ if [ ! -f dist/SmallJavaApp.jar ]; then
 fi
 
 /usr/local/jdk-17/bin/jpackage \
+  --app-version 1.2.3 \
   --input dist/ \
   --dest dist/ \
   --name SmallJavaApp \
