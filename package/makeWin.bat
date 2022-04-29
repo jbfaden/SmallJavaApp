@@ -15,6 +15,8 @@ c:\Progra~1\Java\jdk-17.0.2\bin\jpackage ^
   --type exe ^
   --vendor "Cottage Systems" ^
   --copyright "Copyright 2022 faden@cottagesystems.com" ^
-  --java-options "--enable-preview"
-
+  --win-per-user-install ^
+  --win-menu ^
+  --win-menu-group Autoplot
+  
 rem "dist/smalljavaapp_%v%-1_amd64.exe"
