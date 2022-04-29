@@ -6,17 +6,15 @@ rem "check for dist/SmallJavaApp.jar"
 
 SET v=1.2.3
 
-jpackage ^
-  --app-version $v ^
-  --input dist/ ^
-  --dest dist/ ^
+c:\Progra~1\Java\jdk-17.0.2\bin\jpackage ^
+  --app-version %v% ^
+  --input dist ^
+  --dest dist ^
   --name SmallJavaApp ^
   --main-jar SmallJavaApp.jar ^
   --type exe ^
   --vendor "Cottage Systems" ^
   --copyright "Copyright 2022 faden@cottagesystems.com" ^
-  --java-options '--enable-preview'
+  --java-options "--enable-preview"
 
-rem "dist/smalljavaapp_$v-1_amd64.exe"
-
-
+rem "dist/smalljavaapp_%v%-1_amd64.exe"
