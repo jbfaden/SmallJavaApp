@@ -1,5 +1,5 @@
 echo "Building deb file from autoplot.jar"
-echo "This should be run in the root of the project."
+echo "This should be run in the root of the project, containing dist directory."
 echo "package/makeDeb.sh"
 
 if [ ! -f dist/SmallJavaApp.jar ]; then
