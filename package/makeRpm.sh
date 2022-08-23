@@ -9,7 +9,7 @@ fi
 
 v=1.2.3
 
-/usr/local/jdk-17/bin/jpackage \
+/home/jbf/local/jdk-17/bin/jpackage \
   --app-version $v \
   --input dist/ \
   --dest dist/ \
