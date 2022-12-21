@@ -122,6 +122,12 @@ public class SayHello extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     public static void main(String[] args  ) {
+        System.err.println("Starting SayHello app.");
+        if ( java.awt.GraphicsEnvironment.isHeadless() ) {
+            System.err.println("  java.awt.GraphicsEnvironment.isHeadless()==true, aborting.");
+        } else {
+            System.err.println("  starting GUI...");
+        }
         JOptionPane.showMessageDialog( null, new SayHello(), "Say Hello", JOptionPane.OK_OPTION, 
             new ImageIcon( SayHello.class.getResource("icon.png") ) );
     }

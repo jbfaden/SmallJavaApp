@@ -1,0 +1,4 @@
+icon= getDataSet( 'http://autoplot.org/autoplot/images/Logo96.png' )
+r= where( icon[:,:,0].eq(0) .and( icon[:,:,0].eq(0) ).and( icon[:,:,0].eq(0) ) )
+icon[r]= 128
+formatDataSet( icon,'/tmp/icon.png')
