@@ -1,4 +1,17 @@
 icon= getDataSet( 'http://autoplot.org/autoplot/images/Logo96.png' )
-r= where( icon[:,:,0].eq(0) .and( icon[:,:,0].eq(0) ).and( icon[:,:,0].eq(0) ) )
-icon[r]= 128
+
+w= icon.length()
+
+for i in xrange(1000):
+    i= i % w
+    r= where( icon[i,:,0].eq(255) )
+    if r.length()==0:
+        #icon[ i,0,: ] = 255
+        pass
+    else:
+        h= r[-1]+1
+        if h<96:
+            icon[ i,h,: ] = 255
+    #plot( icon )
+plot( icon )
 formatDataSet( icon,'/tmp/icon.png')
